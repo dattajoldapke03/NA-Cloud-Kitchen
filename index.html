@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neha & Anjali Cloud Kitchen</title>
+<style>
+  body
+  <div id="topButtons">
+  <button onclick="viewCart()">🛒 Cart</button>
+  <button onclick="logout()">🚪 Logout</button>
+  <button onclick="openAdmin()">👑 Admin</button>
+</div>
+    <div id="loginPage"> ... </div>
+  <div id="homePage"> ... </div>
+
+  {font-family:sans-serif;margin:0;padding:0;}
+  .page{display:none;padding:20px;}
+  .card{display:inline-block;border:1px solid #ccc;margin:10px;padding:10px;text-align:center;width:200px;}
+  .bill-box{border:1px solid #000;padding:10px;margin:10px;}
+  button{cursor:pointer;}
+  #products img{border-radius:5px;}
+</div>
+</style>
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="page">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- HOME PAGE -->
+<div id="homePage" class="page">
+  <h2>Menu</h2>
+  <div>
+    <button onclick="filterCat('VEG')">VEG</button>
+    <button onclick="filterCat('PARATHA')">PARATHA</button>
+    <button onclick="filterCat('NONVEG')">NON-VEG</button>
+    <button onclick="filterCat('SNACKS')">SNACKS</button>
+    <button onclick="filterCat('DRINKS')">DRINKS</button>
+    <button onclick="filterCat('DESSERTS')">DESSERTS</button>
+  </div>
+  <br>
+  <button onclick="viewCart()">View Cart</button>
+  <button onclick="openAdmin()">Admin</button>
+  <button onclick="logout()">Logout</button>
+  <div id="products"></div>
+</div>
+
+<!-- CART PAGE -->
+<div id="cartPage" class="page">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div><br>
+  <input type="text" id="address" placeholder="Enter delivery address"><br><br>
+  <h3>Select Payment:</h3>
+  <input type="radio" name="pay" value="Cash"> Cash
+  <input type="radio" name="pay" value="UPI"> UPI<br><br>
+  <div id="upiBox" style="display:none;">
+    <input type="text" id="upi" placeholder="Enter UPI ID"><br><br>
+  </div>
+  <button onclick="placeOrder()">Place Order</button>
+  <button onclick="showPage('homePage')">Back to Menu</button>
+</div>
+
+<!-- BILL PAGE -->
+<div id="billPage" class="page">
+  <h2>Bill</h2>
+  <div id="bill"></div>
+  <button onclick="printBill()">Print Bill</button>
+  <button onclick="showPage('homePage')">Back to Menu</button>
+</div>
+
+<!-- ADMIN PAGE -->
+<div id="adminPage" class="page">
+  <h2>Admin Orders</h2>
+  <div id="orders"></div>
+  <button onclick="showPage('homePage')">Back to Menu</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
