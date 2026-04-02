@@ -1,0 +1,113 @@
+body{
+  font-family: Arial;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.page {
+  display: none;
+  margin-top: 60px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  margin: 10px;
+  width: 180px;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+}
+
+/* BILL */
+.bill-box {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px dashed black;
+  background: white;
+  text-align: left;
+}
+
+.bill-box table {
+  width: 100%;
+}
+
+/* ADMIN SCROLL */
+#orders {
+  max-height: 500px;
+  overflow: auto;
+}
+
+/* Top Buttons Styling (Cart, Logout, Admin) */
+#topButtons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+#topButtons button {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Cart Button */
+.cartButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cartButton:hover {
+  transform: scale(1.1);
+  background-color: #45a049;
+}
+
+/* Logout Button */
+.logoutButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.logoutButton:hover {
+  transform: scale(1.1);
+  background-color: #e53935;
+}
+
+/* Admin Button */
+.adminButton {
+  background-color: #2196F3;
+  color: white;
+}
+
+.adminButton:hover {
+  transform: scale(1.1);
+  background-color: #1976D2;
+}
