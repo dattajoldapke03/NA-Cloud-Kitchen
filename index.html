@@ -4,26 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Neha & Anjali Cloud Kitchen</title>
-<style>
-  body
-  <div id="topButtons">
-  <button onclick="viewCart()">🛒 Cart</button>
-  <button onclick="logout()">🚪 Logout</button>
-  <button onclick="openAdmin()">👑 Admin</button>
-</div>
-    <div id="loginPage"> ... </div>
-  <div id="homePage"> ... </div>
 
-  {font-family:sans-serif;margin:0;padding:0;}
-  .page{display:none;padding:20px;}
-  .card{display:inline-block;border:1px solid #ccc;margin:10px;padding:10px;text-align:center;width:200px;}
-  .bill-box{border:1px solid #000;padding:10px;margin:10px;}
-  button{cursor:pointer;}
-  #products img{border-radius:5px;}
-</div>
-</style>
+<!-- LINK CSS -->
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
+<!-- TOP BUTTONS -->
+<div id="topButtons">
+  <button class="cartButton" onclick="viewCart()">🛒 Cart</button>
+  <button class="logoutButton" onclick="logout()">🚪 Logout</button>
+  <button class="adminButton" onclick="openAdmin()">👑 Admin</button>
+</div>
 
 <!-- LOGIN PAGE -->
 <div id="loginPage" class="page">
@@ -44,10 +37,12 @@
     <button onclick="filterCat('DRINKS')">DRINKS</button>
     <button onclick="filterCat('DESSERTS')">DESSERTS</button>
   </div>
+
   <br>
   <button onclick="viewCart()">View Cart</button>
   <button onclick="openAdmin()">Admin</button>
   <button onclick="logout()">Logout</button>
+
   <div id="products"></div>
 </div>
 
@@ -55,13 +50,17 @@
 <div id="cartPage" class="page">
   <h2>Your Cart</h2>
   <div id="cartItems"></div><br>
+
   <input type="text" id="address" placeholder="Enter delivery address"><br><br>
+
   <h3>Select Payment:</h3>
   <input type="radio" name="pay" value="Cash"> Cash
   <input type="radio" name="pay" value="UPI"> UPI<br><br>
+
   <div id="upiBox" style="display:none;">
     <input type="text" id="upi" placeholder="Enter UPI ID"><br><br>
   </div>
+
   <button onclick="placeOrder()">Place Order</button>
   <button onclick="showPage('homePage')">Back to Menu</button>
 </div>
@@ -81,6 +80,8 @@
   <button onclick="showPage('homePage')">Back to Menu</button>
 </div>
 
-<script src="app.js"></script>
+<!-- LINK JS -->
+<script src="script.js"></script>
+
 </body>
 </html>
