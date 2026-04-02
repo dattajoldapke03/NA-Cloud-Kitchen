@@ -215,8 +215,8 @@ function printBill(){ window.print(); }
 
 // ===== TELEGRAM NOTIFICATION =====
 function sendToTelegram(order){
-  const botToken = "8631969264:AAFdFEx6-4rmjqT7T1YS-e5EXpH2urCG43w";  // Replace with your bot token
-  const chatId = "7562317809";      // Replace with your chat ID
+  const botToken = "";  // Replace with your bot token
+  const chatId = "";      // Replace with your chat ID
   const msg = `New Order:\nDate: ${order.date}\nAddress: ${order.address}\nPayment: ${order.payment} ${order.upi?`(UPI: ${order.upi})`:''}\nItems:\n${order.items.map(i=>i.name+" - ₹"+i.price).join("\n")}\nTotal: ₹${order.total}`;
   fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(msg)}`)
   .then(res=>res.json())
